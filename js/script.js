@@ -111,8 +111,8 @@ function checkingWinner() {
   let winner = 'you' 
   if (computerScore == humanScore) {
     winner = 'Draw'
-  }
-  if (computerScore > humanScore) {
+    
+  } else if (computerScore > humanScore) {
     winner = 'computer'
   }
   return winner
@@ -131,7 +131,7 @@ function startingGame() {
     console.log('you are the main winner')
     winnerAlert.textContent = getCapitalizeResult(winner)
     winnerAlert.textContent += ' are the winner'
-    
+
   } else {
     winnerAlert.textContent = getCapitalizeResult(winner)
     winnerAlert.textContent += ' is the winner'
